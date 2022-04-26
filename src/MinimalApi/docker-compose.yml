@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  minimal-api:
+    image: minimalapi:latest
+    build: .
+    ports: 
+      - "8081:80"
+    networks:
+      - my-network
+    
+
+networks: 
+    my-network:
+        driver: bridge
